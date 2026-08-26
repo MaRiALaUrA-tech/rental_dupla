@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Solicitação - Rental Eventos</title>
+
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+
+        <h1>Rental Eventos</h1>
+
+        <nav>
+            <a href="../principal/principal.html">Início</a>
+            <a href="../equipamentos/equipamentos.html">Equipamentos</a>
+            <a href="../solicitacao/solicitacao.html">Solicitação</a>
+            <a href="../login/login.html">Sair</a>
+        </nav>
+
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <section>
+
+            <h2>Solicitação de equipamento</h2>
+
+            <p>
+                Preencha os dados abaixo para solicitar um equipamento.
+            </p>
+
+        </section>
+
+
+        <!-- FORMULÁRIO -->
+        <section>
+
+            <form>
+
+                <!-- EQUIPAMENTO -->
+                <label for="equipamento">
+                    Equipamento:
+                </label>
+
+                <select id="equipamento" name="equipamento" required>
+
+                    <option value="">
+                        Selecione um equipamento
+                    </option>
+
+                    <option value="caixa-de-som">
+                        Caixa de Som
+                    </option>
+
+                    <option value="microfone">
+                        Microfone
+                    </option>
+
+                    <option value="projetor">
+                        Projetor
+                    </option>
+
+                    <option value="iluminacao">
+                        Iluminação
+                    </option>
+
+                </select>
+
+
+                <!-- DATA -->
+                <label for="data">
+                    Data do evento:
+                </label>
+
+                <input 
+                    type="date" 
+                    id="data" 
+                    name="data"
+                    required
+                >
+
+
+                <!-- HORÁRIO -->
+                <label for="horario">
+                    Horário:
+                </label>
+
+                <input 
+                    type="time" 
+                    id="horario" 
+                    name="horario"
+                    required
+                >
+
+
+                <!-- QUANTIDADE -->
+                <label for="quantidade">
+                    Quantidade:
+                </label>
+
+                <input 
+                    type="number" 
+                    id="quantidade" 
+                    name="quantidade"
+                    min="1"
+                    required
+                >
+
+
+                <!-- OBSERVAÇÕES -->
+                <label for="observacoes">
+                    Observações:
+                </label>
+
+                <textarea 
+                    id="observacoes" 
+                    name="observacoes"
+                    rows="5"
+                    placeholder="Digite alguma observação sobre sua solicitação..."
+                ></textarea>
+
+
+                <!-- BOTÃO -->
+                <button type="submit">
+                    Enviar solicitação
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <p>
+            © 2026 Rental Eventos - Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
