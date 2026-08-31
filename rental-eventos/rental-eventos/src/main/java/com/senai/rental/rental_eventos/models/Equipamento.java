@@ -15,39 +15,51 @@ public class Equipamento {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
 
+    @NotBlank(message = "Adicione um equipamento")
     @Column(name="equipamento_id")
     private Integer equipamentoId;
 
-    @Column(name="nome")
-    private String nome;
+    @NotBlank(message = "Coloque o nome do equipamento")
+    @Column(name="nome_equipamento")
+    private String nomeEquipamento;
 
+    @NotBlank(message = "Coloque a marca do equipamento")
     @Column(name="marca")
     private String marca;
 
+    @NotBlank(message = "Coloque o modelo do equipamento")
     @Column(name="modelo")
     private String modelo;
 
+    @NotBlank(message = "Coloque a potência do equipamento")
     @Column(name="potencia")
     private String potencia;
 
+    @NotBlank(message = "Coloque o material do equipamento")
     @Column(name="material")
     private String material;
 
+    @NotNull(message="Coloque o peso")
     @Column(name="peso")
     private BigDecimal peso;
 
+    @NotBlank(message="Coloque as dimensões")
     @Column(name="dimensoes")
     private String dimensoes;
 
+    @NotBlank(message="Coloque a cor/cores do equipamento")
     @Column(name="cor")
     private String cor;
 
+    @NotNull(message="Indique a quantidade total")
     @Column(name="qtd_total")
     private Integer qtdTotal;
 
+    @NotNull(message="Indique a quantidade disponível")
     @Column(name="qtd_disponivel")
     private Integer qtdDisponivel;
 
+    @NotNull(message="Indique a quantidade mínima")
     @Column(name="qtd_minima")
     private Integer qtdMinima;
 
@@ -56,11 +68,11 @@ public class Equipamento {
 
     public Equipamento(){}
 
-    public Equipamento(Integer equipamentoId, String nome, String marca, String modelo, String potencia,
+    public Equipamento(Integer equipamentoId, String nomeEquipamento, String marca, String modelo, String potencia,
             String material, BigDecimal peso, String dimensoes, String cor, Integer qtdTotal, Integer qtdDisponivel,
             Integer qtdMinima, Boolean statusEquipamento) {
         this.equipamentoId = equipamentoId;
-        this.nome = nome;
+        this.nomeEquipamento = nomeEquipamento;
         this.marca = marca;
         this.modelo = modelo;
         this.potencia = potencia;
@@ -82,12 +94,12 @@ public class Equipamento {
         this.equipamentoId = equipamentoId;
     }
 
-    public String getNome() {
-        return nome;
+    public String getNomeEquipamento() {
+        return nomeEquipamento;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNome(String nomeEquipamento) {
+        this.nomeEquipamento = nomeEquipamento;
     }
 
     public String getMarca() {

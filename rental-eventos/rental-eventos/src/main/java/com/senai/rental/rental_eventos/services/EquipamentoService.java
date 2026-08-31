@@ -25,30 +25,35 @@ public class EquipamentoService {
     }
 
     public Equipamento buscarEquipamento(Integer equipamentoId){
-        return equipamentoRepository.findById(equipamentoId).get();
+        return equipamentoRepository.findByEquipamentoId(equipamentoId).get();
+    }
+
+    public Equipamento procurarEquipamento(String nomeEquipamento){
+        return equipamentoRepository.findByNome(nomeEquipamento)
+            .orElseThrow(()-> new IllegalArgumentException("Equipamento não encontrado"));
     }
     //Editar equipamento - 6.1.4
 
     public Equipamento editarEquipamento(Integer equipamentoId, Equipamento equipamento){
         Equipamento equipamentoEditado = buscarEquipamento(equipamentoId);
-        if(equipamentoEditado != null) {
+        if(equipamentoEditado != null){
             equipamentoEditado.setEquipamentoId(equipamentoId);
-            if(equipamento.getNome() != null) {
-                equipamentoEditado.setNome(equipamento.getNome());
+            if(equipamento.getNomeEquipamento() != null){
+                equipamentoEditado.setNomeEquipamento(equipamento.getNomeEquipamento());
             }
-            if(equipamento.getMarca() != null) {
+            if(equipamento.getMarca() != null){
                 equipamentoEditado.setMarca(equipamento.getMarca());
             }
-            if(equipamento.getModelo() != null) {
+            if(equipamento.getModelo() != null){
                 equipamentoEditado.setModelo(equipamento.getModelo());
             }
-            if(equipamento.getPotencia() != null) {
+            if(equipamento.getPotencia() != null){
                 equipamentoEditado.setPotencia(equipamento.getPotencia());
             }
-            if(equipamento.getMaterial() != null) {
+            if(equipamento.getMaterial() != null){
                 equipamentoEditado.setMaterial(equipamento.getMaterial());
             }
-            if(equipamento.getPeso() != null) {
+            if(equipamento.getPeso() != null){
                 equipamentoEditado.setPeso(equipamento.getPeso());
             }
             if(equipamento.getDimensoes() != null){
@@ -86,7 +91,7 @@ public class EquipamentoService {
         return false;
     }
 
-    //6.1.2 e 6.1.6 é no Java?
+
 
 }
 
