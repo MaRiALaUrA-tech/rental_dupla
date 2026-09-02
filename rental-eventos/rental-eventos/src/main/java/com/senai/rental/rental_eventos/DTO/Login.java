@@ -1,5 +1,7 @@
 package com.senai.rental.rental_eventos.DTO;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class Login{
     @NotBlank(message="E-mail obrigatório.")
     private String email;

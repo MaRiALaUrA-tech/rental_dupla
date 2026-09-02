@@ -7,5 +7,7 @@ import com.senai.rental.rental_eventos.models.Equipamento;
 
 @Repository
 public interface EquipamentoRepository extends JpaRepository<Equipamento, Integer>{
-    
 }
+
+
+

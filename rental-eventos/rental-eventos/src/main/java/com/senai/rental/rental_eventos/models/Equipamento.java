@@ -7,7 +7,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name="equipamento")
@@ -15,7 +19,6 @@ public class Equipamento {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
 
-    @NotBlank(message = "Adicione um equipamento")
     @Column(name="equipamento_id")
     private Integer equipamentoId;
 
@@ -86,6 +89,10 @@ public class Equipamento {
         this.statusEquipamento = statusEquipamento;
     }
 
+    @ManyToOne
+    @JoinColumn(name="categoria_id")
+    private Categoria categoria;
+
     public Integer getEquipamentoId() {
         return equipamentoId;
     }
@@ -98,7 +105,7 @@ public class Equipamento {
         return nomeEquipamento;
     }
 
-    public void setNome(String nomeEquipamento) {
+    public void setNomeEquipamento(String nomeEquipamento) {
         this.nomeEquipamento = nomeEquipamento;
     }
 
@@ -189,6 +196,12 @@ public class Equipamento {
     public void setStatusEquipamento(Boolean statusEquipamento) {
         this.statusEquipamento = statusEquipamento;
     }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+
 
     
     

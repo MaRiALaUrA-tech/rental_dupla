@@ -3,6 +3,7 @@ package com.senai.rental.rental_eventos.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.senai.rental.rental_eventos.models.Equipamento;
@@ -10,16 +11,17 @@ import com.senai.rental.rental_eventos.repositories.EquipamentoRepository;
 
 @Service
 public class EquipamentoService {
+    
     @Autowired
     private EquipamentoRepository equipamentoRepository;
 
-    //Listar os equipamentos - 6.1.1
+    //Listar os equipamentos - 6.1.1 e 7.1.1(ordem alfabética)
 
     public List<Equipamento> listarEquipamentos(){
-        return equipamentoRepository.findAll();
+        return equipamentoRepository.findAll(Sort.by(Sort.Direction.ASC, "nomeEquipamento"));
     }
 
-    //Cadastro equipamento - 6.1.3
+    //Cadastro equipamento - 6.1.3 
     public Equipamento cadastrarEquipamento(Equipamento equipamento){
         return equipamentoRepository.save(equipamento);
     }
@@ -29,7 +31,7 @@ public class EquipamentoService {
     }
 
     public Equipamento procurarEquipamento(String nomeEquipamento){
-        return equipamentoRepository.findByNome(nomeEquipamento)
+        return equipamentoRepository.findByNomeEquipamento(nomeEquipamento)
             .orElseThrow(()-> new IllegalArgumentException("Equipamento não encontrado"));
     }
     //Editar equipamento - 6.1.4

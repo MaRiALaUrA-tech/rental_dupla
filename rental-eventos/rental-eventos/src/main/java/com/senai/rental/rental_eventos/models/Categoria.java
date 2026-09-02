@@ -24,11 +24,13 @@ public class Categoria {
 
     public Categoria (){}
 
+    
     public Categoria(Integer categoriaId, String nome, String descricao) {
         this.categoriaId = categoriaId;
         this.nome = nome;
         this.descricao = descricao;
     }
+
 
     public Integer getCategoriaId() {
         return categoriaId;
