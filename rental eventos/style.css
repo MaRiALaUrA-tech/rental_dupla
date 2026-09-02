@@ -1,23 +1,1132 @@
-body {
-    background-color:#f5f5f5;
-    font-family: Arial, sans-serif;
+/* ============================= */
+/* ESTILO GERAL */
+/* ============================= */
+
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
-     color:#333;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f7fa;
+    color: #29252d;
 }
 
-button {
-    background-color: #007bff ;
+
+/* ============================= */
+/* CABEÇALHO */
+/* ============================= */
+
+.cabecalho {
+    width: 100%;
+    background: linear-gradient(90deg, #6c3fc5, #e94b87);
+    padding: 18px 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
     color: white;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #f6c445;
+}
+
+
+/* ============================= */
+/* BANNER */
+/* ============================= */
+
+.banner {
+    min-height: 380px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #6c3fc5,
+        #e94b87
+    );
+
+    color: white;
+}
+
+.banner-conteudo {
+    max-width: 700px;
+}
+
+.banner h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+/* ============================= */
+/* BOTÃO PRINCIPAL */
+/* ============================= */
+
+.botao-principal {
+    display: inline-block;
+
+    background-color: #f6c445;
+    color: #29252d;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.botao-principal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ============================= */
+/* SEÇÕES */
+/* ============================= */
+
+.secao {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 60px 20px;
+}
+
+.secao > h2 {
+    text-align: center;
+
+    font-size: 30px;
+
+    margin-bottom: 35px;
+
+    color: #6c3fc5;
+}
+
+
+/* ============================= */
+/* CARDS */
+/* ============================= */
+
+.cards {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+
+    width: 320px;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.icone {
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 21px;
+
+    margin-bottom: 12px;
+
+    color: #6c3fc5;
+}
+
+.card p {
+    color: #666;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+/* ============================= */
+/* BOTÃO DOS CARDS */
+/* ============================= */
+
+.botao-card {
+    display: inline-block;
+
+    background-color: #6c3fc5;
+
+    color: white;
+
+    padding: 11px 20px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.botao-card:hover {
+    background-color: #e94b87;
+}
+
+
+/* ============================= */
+/* RODAPÉ */
+/* ============================= */
+
+footer {
+    background-color: #29252d;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+
+/* ============================= */
+/* CELULAR */
+/* ============================= */
+
+@media (max-width: 700px) {
+
+    .cabecalho {
+        padding: 18px 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .banner h2 {
+        font-size: 32px;
+    }
+
+    .banner p {
+        font-size: 17px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+/* ============================= */
+/* TELA DE LOGIN */
+/* ============================= */
+
+.login-container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #6c3fc5,
+        #e94b87
+    );
+}
+
+
+/* ============================= */
+/* CARD DE LOGIN */
+/* ============================= */
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+
+    background-color: white;
+
+    padding: 45px 40px;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ============================= */
+/* LOGO */
+/* ============================= */
+
+.logo-login {
+    font-size: 34px;
+
+    color: #6c3fc5;
+
+    margin-bottom: 25px;
+}
+
+
+/* ============================= */
+/* TÍTULO */
+/* ============================= */
+
+.login-card h2 {
+    font-size: 28px;
+
+    color: #29252d;
+
+    margin-bottom: 8px;
+}
+
+.login-subtitulo {
+    color: #777;
+
+    margin-bottom: 30px;
+}
+
+
+/* ============================= */
+/* CAMPOS */
+/* ============================= */
+
+.campo {
+    text-align: left;
+
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+
+    color: #29252d;
+}
+
+.campo input {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 2px solid #e2dfea;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.campo input:focus {
+    border-color: #6c3fc5;
+
+    box-shadow: 0 0 0 3px rgba(108, 63, 197, 0.1);
+}
+
+
+/* ============================= */
+/* BOTÃO LOGIN */
+/* ============================= */
+
+.botao-login {
+    width: 100%;
+
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+
+    background: linear-gradient(
+        90deg,
+        #6c3fc5,
+        #e94b87
+    );
+
+    color: white;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.botao-login:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 18px rgba(108, 63, 197, 0.3);
+}
+
+
+/* ============================= */
+/* CADASTRO */
+/* ============================= */
+
+.cadastro-login {
+    margin-top: 25px;
+
+    color: #666;
+
+    font-size: 14px;
+}
+
+.cadastro-login a {
+    color: #6c3fc5;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.cadastro-login a:hover {
+    color: #e94b87;
+
+    text-decoration: underline;
+}
+
+/* ============================= */
+/* TELA DE CADASTRO */
+/* ============================= */
+
+.cadastro-container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #6c3fc5,
+        #e94b87
+    );
+}
+
+
+/* ============================= */
+/* CARD DE CADASTRO */
+/* ============================= */
+
+.cadastro-card {
+    width: 100%;
+    max-width: 500px;
+
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 22px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ============================= */
+/* LOGO */
+/* ============================= */
+
+.logo-cadastro {
+    text-align: center;
+
+    font-size: 34px;
+
+    color: #6c3fc5;
+
+    margin-bottom: 20px;
+}
+
+
+/* ============================= */
+/* TÍTULO */
+/* ============================= */
+
+.cadastro-card h2 {
+    text-align: center;
+
+    font-size: 27px;
+
+    color: #29252d;
+
+    margin-bottom: 8px;
+}
+
+.cadastro-subtitulo {
+    text-align: center;
+
+    color: #777;
+
+    margin-bottom: 30px;
+
+    line-height: 1.5;
+}
+
+
+/* ============================= */
+/* CAMPOS */
+/* ============================= */
+
+.cadastro-card .campo {
+    text-align: left;
+
+    margin-bottom: 18px;
+}
+
+.cadastro-card .campo label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+
+    color: #29252d;
+}
+
+.cadastro-card .campo input {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 2px solid #e2dfea;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.cadastro-card .campo input:focus {
+    border-color: #6c3fc5;
+
+    box-shadow: 0 0 0 3px rgba(108, 63, 197, 0.1);
+}
+
+
+/* ============================= */
+/* BOTÃO CADASTRO */
+/* ============================= */
+
+.botao-cadastro {
+    width: 100%;
+
+    border: none;
+
+    background: linear-gradient(
+        90deg,
+        #6c3fc5,
+        #e94b87
+    );
+
+    color: white;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 5px;
+
+    transition: 0.3s;
+}
+
+.botao-cadastro:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 18px rgba(108, 63, 197, 0.3);
+}
+
+
+/* ============================= */
+/* VOLTAR PARA LOGIN */
+/* ============================= */
+
+.voltar-login {
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: #666;
+
+    font-size: 14px;
+}
+
+
+.voltar-login a {
+    color: #6c3fc5;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.voltar-login a:hover {
+    color: #e94b87;
+
+    text-decoration: underline;
+}
+
+/* ============================= */
+/* PÁGINA DE EQUIPAMENTOS */
+/* ============================= */
+
+.titulo-pagina {
+    text-align: center;
+
+    padding: 55px 20px 30px;
+}
+
+.titulo-pagina h2 {
+    font-size: 34px;
+
+    color: #6c3fc5;
+
+    margin-bottom: 12px;
+}
+
+.titulo-pagina p {
+    color: #666;
+
+    font-size: 17px;
+}
+
+
+/* ============================= */
+/* PESQUISA */
+/* ============================= */
+
+.pesquisa-container {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 20px;
+}
+
+.pesquisa-container h2 {
+    text-align: center;
+
+    color: #29252d;
+
+    margin-bottom: 20px;
+}
+
+.barra-pesquisa {
+    display: flex;
+
+    gap: 10px;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+}
+
+.barra-pesquisa input {
+    flex: 1;
+
+    padding: 14px 18px;
+
+    border: 2px solid #e2dfea;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.barra-pesquisa input:focus {
+    border-color: #6c3fc5;
+}
+
+.barra-pesquisa button {
+    border: none;
+
+    padding: 14px 25px;
+
+    border-radius: 10px;
+
+    background-color: #6c3fc5;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.barra-pesquisa button:hover {
+    background-color: #e94b87;
+
+    transform: translateY(-2px);
+}
+
+
+/* ============================= */
+/* LISTA DE EQUIPAMENTOS */
+/* ============================= */
+
+.secao-equipamentos {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 45px 20px 70px;
+}
+
+.secao-equipamentos > h2 {
+    text-align: center;
+
+    color: #6c3fc5;
+
+    font-size: 30px;
+
+    margin-bottom: 35px;
+}
+
+
+/* ============================= */
+/* GRID */
+/* ============================= */
+
+.grid-equipamentos {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+/* ============================= */
+/* CARD */
+/* ============================= */
+
+.equipamento-card {
+    background-color: white;
+
+    padding: 30px 25px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.equipamento-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ============================= */
+/* ÍCONE */
+/* ============================= */
+
+.equipamento-icone {
+    width: 85px;
+
+    height: 85px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #f1eafa;
+
+    font-size: 42px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ============================= */
+/* NOME */
+/* ============================= */
+
+.equipamento-card h3 {
+    color: #6c3fc5;
+
+    font-size: 21px;
+
+    margin-bottom: 12px;
+}
+
+
+/* ============================= */
+/* DESCRIÇÃO */
+/* ============================= */
+
+.equipamento-card p {
+    color: #666;
+
+    line-height: 1.5;
+
+    min-height: 48px;
+
+    margin-bottom: 18px;
+}
+
+
+/* ============================= */
+/* STATUS */
+/* ============================= */
+
+.status-disponivel {
+    color: #2e7d32;
+
+    background-color: #e8f5e9;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+
+/* ============================= */
+/* BOTÃO */
+/* ============================= */
+
+.botao-equipamento {
+    display: inline-block;
+
+    width: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #6c3fc5,
+        #e94b87
+    );
+
+    color: white;
+
+    padding: 12px 15px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.botao-equipamento:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 15px rgba(108, 63, 197, 0.25);
+}
+
+
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+
+@media (max-width: 900px) {
+
+    .grid-equipamentos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .grid-equipamentos {
+        grid-template-columns: 1fr;
+    }
+
+    .barra-pesquisa {
+        flex-direction: column;
+    }
+
+    .barra-pesquisa button {
+        width: 100%;
+    }
+
+    .titulo-pagina h2 {
+        font-size: 28px;
+    }
+}
+
+/* SOLICITAÇÃO */
+
+main {
+    padding-bottom: 30px;
+}
+
+main > section:first-child {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+main > section:first-child h2 {
+    color: #6c3fc5;
+}
+
+main > section:first-child p {
+    color: #666;
+}
+
+.solicitacao {
+    max-width: 600px;
+    margin: 20px auto 50px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px #ddd;
+}
+
+.solicitacao label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.solicitacao input,
+.solicitacao select,
+.solicitacao textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.solicitacao input:focus,
+.solicitacao select:focus,
+.solicitacao textarea:focus {
+    outline: none;
+    border-color: #6c3fc5;
+}
+
+.solicitacao textarea {
+    resize: vertical;
+}
+
+.solicitacao button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #6c3fc5;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
     cursor: pointer;
 }
 
-button:hover {
-      background-color: #0056b3;
+.solicitacao button:hover {
+    background-color: #e94b87;
+}
+/* INDEX */
 
+.index {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #6c3fc5, #e94b87);
+    padding: 20px;
+}
+
+.index-conteudo {
+    background-color: white;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px #555;
+    max-width: 500px;
+}
+
+.index-conteudo h1 {
+    color: #6c3fc5;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.index-conteudo p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.index-conteudo a {
+    display: inline-block;
+    background-color: #6c3fc5;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.index-conteudo a:hover {
+    background-color: #e94b87;
+}
+
+/* CADASTRO DE EQUIPAMENTO */
+
+.cadastro-equipamento {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px #ddd;
+}
+
+.cadastro-equipamento h2 {
+    text-align: center;
+    color: #6c3fc5;
+    margin-bottom: 25px;
+}
+
+.cadastro-equipamento label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.cadastro-equipamento input,
+.cadastro-equipamento textarea,
+.cadastro-equipamento select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.cadastro-equipamento textarea {
+    height: 100px;
+}
+
+.cadastro-equipamento button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #6c3fc5;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cadastro-equipamento button:hover {
+    background-color: #e94b87;
 }

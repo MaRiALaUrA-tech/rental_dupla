@@ -118,6 +118,8 @@ obs_movimentacao text
 
 );
 
+alter table movimentacao add column equipamento_id int;
+
 
 
 alter table equipamento add constraint fk_categoria foreign key (categoria_id) references categoria (categoria_id);
@@ -127,6 +129,9 @@ alter table locacao add constraint fk_equipamento foreign key (equipamento_id) r
 alter table usuario add constraint fk_locacao foreign key (locacao_id) references locacao (locacao_id);
 
 alter table movimentacao add constraint fk_usuario foreign key (usuario_id) references usuario (usuario_id);
+
+alter table movimentacao add constraint fk_equipamento foreign key (equipamento_id) references equipamento (equipamento_id);
+
 
 
 

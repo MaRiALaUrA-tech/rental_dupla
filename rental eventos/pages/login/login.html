@@ -1,37 +1,101 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Login - Rental Eventos</title>
+```
+<title>Login - Festaê</title>
+
+<link rel="stylesheet" href="../../style.css">
+```
+
 </head>
 
 <body>
 
-    <h1>Login</h1>
+```
+<div class="login-container">
 
-    <form action="../principal/principal.html">
+    <div class="login-card">
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email">
+        <h1 class="logo-login">Festaê 🎉</h1>
 
-        <br><br>
+        <h2>Bem-vindo!</h2>
 
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha">
+        <p class="login-subtitulo">
+            Entre na sua conta para continuar.
+        </p>
 
-        <br><br>
+        <form onsubmit="entrar(event)">
+            <div class="campo">
+                <label for="email">E-mail</label>
 
-        <button type="submit">Entrar</button>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Digite seu e-mail"
+                    required
+                >
+            </div>
 
-    </form>
+            <div class="campo">
+                <label for="senha">Senha</label>
 
-    <p>
-        Ainda não possui uma conta?
-        <a href="../cadastro/cadastro.html">Cadastre-se</a>
-    </p>
+                <input
+                    type="password"
+                    id="senha"
+                    name="senha"
+                    placeholder="Digite sua senha"
+                    required
+                >
+            </div>
+
+            <button class="botao-login" type="submit">
+                Entrar
+            </button>
+
+        </form>
+
+        <p class="cadastro-login">
+            Ainda não possui uma conta?
+            <a href="../cadastro/cadastro.html">
+                Cadastre-se
+            </a>
+        </p>
+
+    </div>
+
+</div>
+
+
+<script>
+    function salvarLogin(event) {
+
+        event.preventDefault();
+
+        const email = document.getElementById("email").value;
+
+        localStorage.setItem("usuario", email);
+
+        window.location.href = "../principal/principal.html";
+    }
+</script>
+
+<script>
+function entrar(event) {
+    event.preventDefault();
+
+    let nome = prompt("Digite seu nome:");
+
+    localStorage.setItem("nome", nome);
+
+    window.location.href = "../principal/principal.html";
+}
+</script>
 
 </body>
 
